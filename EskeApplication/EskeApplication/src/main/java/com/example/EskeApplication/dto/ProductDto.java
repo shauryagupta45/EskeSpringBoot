@@ -79,9 +79,5 @@ public class ProductDto {
                 ", productMinorScent='" + productMinorScent + '\'' +
                 '}';
     }
-<<<<<<< HEAD
-}
-=======
-}
 
->>>>>>> 303f23edff9e4ebc61916c932457f2f3de8ec608
+}
