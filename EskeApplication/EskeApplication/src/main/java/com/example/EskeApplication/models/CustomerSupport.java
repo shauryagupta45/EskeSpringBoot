@@ -23,7 +23,7 @@ public class CustomerSupport {
     @Enumerated(EnumType.STRING)
     private custStatus custTicketStatus;
 
-    private enum custStatus {
+    public enum custStatus {
         OPEN, CLOSED
     }
 

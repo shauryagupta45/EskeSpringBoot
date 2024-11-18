@@ -22,7 +22,7 @@ public class Logistics {
     @Enumerated(EnumType.STRING)
     private ShipStatus shipmentStatus;
 
-    private enum ShipStatus{
+    public enum ShipStatus{
         DONE,
         NOT_DONE
     }

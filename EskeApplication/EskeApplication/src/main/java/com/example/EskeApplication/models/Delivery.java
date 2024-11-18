@@ -36,7 +36,7 @@ public class Delivery {
     @Enumerated(EnumType.STRING)
     private DeliveryStatus deliveryStatus;
 
-    private enum DeliveryStatus {
+    public enum DeliveryStatus {
         DONE, NOT_DONE
     }
 
