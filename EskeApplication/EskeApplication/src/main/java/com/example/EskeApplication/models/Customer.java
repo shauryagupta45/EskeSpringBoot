@@ -17,7 +17,6 @@ public class Customer {
     @Column(name = "customer_id")
     private Integer customerId;
 
-
     @Column(name = "customer_email", length = 30, unique = true)
     private String customerEmail;
 
@@ -33,16 +32,16 @@ public class Customer {
     @Column(name = "customer_address", nullable = false)
     private String customerAddress;
 
-    @OneToMany(mappedBy = "customerId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<TransactionDetailed> transactionDetailed;
 
-    @OneToMany(mappedBy = "customerId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Transaction> transaction;
 
-    @OneToMany(mappedBy = "customerId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Delivery> delivery;
 
-    @OneToMany(mappedBy = "customerId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<CustomerSupport> customerSupport;
 
     @Override

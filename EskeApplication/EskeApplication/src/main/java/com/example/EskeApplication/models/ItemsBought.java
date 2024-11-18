@@ -20,7 +20,7 @@ public class ItemsBought {
 
     @ManyToOne( cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id", referencedColumnName = "prod_id", nullable = false)
-    private Product productId;
+    private Product product;
 
     @Column(name = "quantity",  nullable = false)
     private Integer quantity;
@@ -39,7 +39,7 @@ public class ItemsBought {
         return "ItemsBought{" +
                 "itemsBoughtId=" + itemsBoughtId +
                 ", orderId=" + orderId +
-                ", productId=" + productId +
+                ", productId=" + product.getProductId() +
                 ", quantity=" + quantity +
                 ", totalProductAmount=" + totalProductAmount +
                 ", totalProductDiscount=" + totalProductDiscount +
